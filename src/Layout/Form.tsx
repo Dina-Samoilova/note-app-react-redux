@@ -104,6 +104,20 @@ export const Form: React.FC = () => {
     }
   };
 
+  const handleCloseButton = () => {
+    if (isAdd) {
+      dispatch(notesActions.adding());
+    }
+
+    if (isEdit) {
+      dispatch(notesActions.editing());
+    }
+
+    resetForm();
+    setIsValid(true);
+    dispatch(notesActions.resetNoteForEdit());
+  };
+
   return (
     <form
       className='row g-3 align-items-end mb-4'
@@ -116,6 +130,14 @@ export const Form: React.FC = () => {
           </div>
         )
       }
+      <div className="d-flex justify-content-end">
+        <button
+          type="button"
+          className="btn-close" aria-label="Close"
+          onClick={handleCloseButton}
+        ></button>
+      </div>
+
       <div className='col-3'>
         <label htmlFor="title">Title</label>
         <input

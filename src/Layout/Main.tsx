@@ -17,15 +17,17 @@ export const Main: React.FC = () => {
         isActive && (
           <>
             <ActiveTablePage />
-            <div className="d-flex justify-content-end mb-4">
-              <button
-                type='button'
-                className="btn btn-primary btn__create"
-                onClick={() => dispatch(notesActions.adding())}
-              >
-                Create Note
-              </button>
-            </div>
+            {(!isAdd && !isEdit) && (
+              <div className="d-flex justify-content-end mb-4">
+                <button
+                  type='button'
+                  className="btn btn-primary btn__create"
+                  onClick={() => dispatch(notesActions.adding())}
+                >
+                  Create Note
+                </button>
+              </div>
+           )}
           </>
         )
       }

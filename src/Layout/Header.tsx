@@ -44,6 +44,5 @@ export const Header: React.FC = () => {
         </ul>
       </div>
     </header>
-
   );
 };
