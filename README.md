@@ -1,6 +1,6 @@
 # Note App JS
 
-[DEMO LINK] ('https://Dina-Samoilova.github.io/note-app-react-redux')
+[DEMO LINK] (https://Dina-Samoilova.github.io/note-app-react-redux)
 
 This is a note app which have tree tables:
 * active notes table
