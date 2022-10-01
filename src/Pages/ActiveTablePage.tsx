@@ -10,6 +10,7 @@ import * as notesActions from '../features/Notes/NoteSlice';
 export const ActiveTablePage: React.FC = () => {
   const dispatch = useAppDispatch();
   const { notes, status } = useAppSelector(state => state.note);
+  console.log(notes);
 
   const activeNotes = notes.filter(note => note.active);
 
