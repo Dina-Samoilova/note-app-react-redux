@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { MdClose } from 'react-icons/md';
 import { Notes } from '../data/data'
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import * as notesActions from '../features/Notes/NoteSlice';
@@ -120,75 +121,80 @@ export const Form: React.FC = () => {
 
   return (
     <form
-      className='row g-3 align-items-end mb-4'
+      className='mb-4'
       onSubmit={handleSubmit}
     >
       {
         !isValid && (
-          <div className="alert alert-danger" role="alert">
+          <div className="py-2 bg-red-300 text-red-800 text-center">
             Please, write information in all fields.
           </div>
         )
       }
-      <div className="d-flex justify-content-end">
+      <div className="flex justify-end mb-3">
         <button
           type="button"
-          className="btn-close" aria-label="Close"
+          className="p-1 hover:text-red-500 hover:scale-125"
           onClick={handleCloseButton}
-        ></button>
-      </div>
-
-      <div className='col-3'>
-        <label htmlFor="title">Title</label>
-        <input
-          id="title"
-          type="text"
-          name="title"
-          className='form-control'
-          value={form.title}
-          onChange={handleFormChange}
-          required
-        />
-      </div>
-      <div className='col-4'>
-        <label htmlFor="description">Description</label>
-        <textarea
-          name="description"
-          id="description"
-          className='form-control'
-          rows={1}
-          value={form.description}
-          onChange={handleFormChange}
-          required
-        ></textarea>
-      </div>
-      <div className='col-3'>
-        <label htmlFor="select" className="col-form-label">
-          Choose Category
-        </label>
-        <select
-          id="select"
-          name="category"
-          className="form-select"
-          aria-label="category"
-          value={form.category}
-          onChange={handleFormChange}
-          required
         >
-          <option value="">Choose Category</option>
-          <option value="Task">Task</option>
-          <option value="Random Thought">Random Thought</option>
-          <option value="Idea">Idea</option>
-        </select>
-      </div>
-
-      <div className="col-2 d-flex justify-content-end">
-        <button
-          type='submit'
-          className='btn btn-primary'
-        >
-          Submit
+          <MdClose />
         </button>
+      </div>
+
+      <div className="flex justify-between">
+        <div className='block px-2 w-1/3'>
+          <label htmlFor="title" className='block text-gray-900 text-base font-medium mb-2'>Title</label>
+          <input
+            id="title"
+            type="text"
+            name="title"
+            className='shadow border rounded w-full py-2 px-3 text-gray-700 text-sm focus:outline-none focus:shadow-outline focus:shadow-slate-700'
+            value={form.title}
+            onChange={handleFormChange}
+            required
+          />
+        </div>
+        <div className='block px-2 w-1/3'>
+          <label htmlFor="description" className='block text-gray-900 text-base font-medium mb-2'>Description</label>
+          <textarea
+            name="description"
+            id="description"
+            className='shadow border rounded w-full py-2 px-3 text-gray-700 text-sm focus:outline-none focus:shadow-outline focus:shadow-slate-700'
+            rows={1}
+            value={form.description}
+            onChange={handleFormChange}
+            required
+          ></textarea>
+        </div>
+        <div className='block px-2 w-1/3'>
+          <label htmlFor="select" className="block text-gray-900 text-base font-medium mb-2">
+            Choose Category
+          </label>
+          <select
+            id="select"
+            name="category"
+            className="shadow border rounded w-full py-2 px-3 text-gray-700 text-sm focus:outline-none focus:shadow-outline focus:shadow-slate-700"
+            value={form.category}
+            onChange={handleFormChange}
+            required
+          >
+            <option value="">Choose Category</option>
+            <option value="Task">Task</option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+          </select>
+        </div>
+
+        <div className="self-end mb-1">
+          <button
+            type='submit'
+            className='px-4 py-2 border bg-teal-400
+                    text-teal-900 tracking-wide rounded-lg hover:bg-teal-500
+                    hover:text-white hover:ring ring-teal-300 ring-inset'
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </form>
   );

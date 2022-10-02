@@ -11,11 +11,11 @@ export const Footer:React.FC = () => {
   const archivedNotes = notes.filter(note => !note.active);
 
   return (
-    <div className='container'>
-      <h4 className='font-monospace text-center mb-0'>Statistic</h4>
+    <div className='container mx-auto px-5 overflow-x-auto'>
+      <h4 className='py-2 text-center text-xl tracking-wide font-bold'>Statistic</h4>
       <Table>
-        <thead>
-          <tr className="bg-primary bg-opacity-25 text-center">
+        <thead className="text-center bg-teal-400 border-b-2 border-gray-900">
+          <tr>
             {
               tableHeaderStat.map(header => (
                 <Cell key={header} elementType='th'>
@@ -25,7 +25,7 @@ export const Footer:React.FC = () => {
             }
           </tr>
         </thead>
-        <tbody className="table-group-divider">
+        <tbody>
           {
             Object.values(Category).map(category => (
               <tr key={category} className='text-center'>

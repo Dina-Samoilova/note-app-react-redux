@@ -11,7 +11,7 @@ You can archiving, adding, edit or delete notes.
 
 ### Technology used
 * HTML
-* Bootstrap 5
+* Tailwind
 * React
 * Redux Toolkit
 * Typescript

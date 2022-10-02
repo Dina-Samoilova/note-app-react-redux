@@ -6,7 +6,7 @@ type Props = {
 
 export const Table: React.FC<Props> = ({ children }) => {
   return (
-    <table className="table table-hover shadow">
+    <table className="w-full">
       {children}
     </table>
   );

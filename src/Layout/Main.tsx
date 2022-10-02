@@ -12,16 +12,18 @@ export const Main: React.FC = () => {
   } = useAppSelector(state => state.note);
 
   return (
-    <div className='container'>
+    <div className='container mx-auto px-5 overflow-x-auto'>
       {
         isActive && (
           <>
             <ActiveTablePage />
             {(!isAdd && !isEdit) && (
-              <div className="d-flex justify-content-end mb-4">
+              <div className="flex justify-end mb-4">
                 <button
                   type='button'
-                  className="btn btn-primary btn__create"
+                  className="px-4 py-2 border bg-teal-400
+                    text-teal-900 tracking-wide rounded-lg hover:bg-teal-500
+                    hover:text-white hover:ring ring-teal-300 ring-inset"
                   onClick={() => dispatch(notesActions.adding())}
                 >
                   Create Note

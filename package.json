@@ -2,7 +2,7 @@
   "name": "note-app-react-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://Dina-Samoilova.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,7 +12,6 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "bootstrap": "^5.2.1",
     "classnames": "^2.3.2",
     "gh-pages": "^4.0.0",
     "node-sass": "^7.0.3",
@@ -51,6 +50,9 @@
     ]
   },
   "devDependencies": {
-    "@types/bootstrap": "^5.2.4"
+    "@types/bootstrap": "^5.2.4",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8"
   }
 }

@@ -10,12 +10,12 @@ export const Cell: React.FC<Props> = ({ children, elementType }) => {
     <>
       {elementType === 'th'
         ? (
-          <th>
+          <th className='px-2 py-1 text-base'>
             {children}
           </th>
         )
         : (
-          <td>
+          <td className='px-3 py-2 text-sm'>
             {children}
           </td>
       )}
