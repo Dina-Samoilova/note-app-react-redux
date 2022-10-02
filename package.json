@@ -2,7 +2,7 @@
   "name": "note-app-react-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Dina-Samoilova.github.io",
+  "homepage": "https://Dina-Samoilova.github.io/note-app-react-redux/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
